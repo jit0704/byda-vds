@@ -154,7 +154,7 @@ table {
   top: 0;
   left: 0;
   width: 280px;
-  height: calc(100% + 100px);
+  height: 100%;
   background: #222933;
 }
 
@@ -1182,9 +1182,13 @@ table {
   padding-left: 10px;
 }
 
-.lnb__list .depth1 {
-  display: none;
-  border-bottom: 0;
+.lnb__list li:not(.no-depth) > a::after {
+  content: "\002B";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -10px;
+  color: #fff;
 }
 
 .lnb__list .depth1 > ul {
@@ -1202,8 +1206,14 @@ table {
   font-size: 15px;
 }
 
+.lnb__list .depth1.active > a::after {
+  content: "\2212";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+}
+
 .lnb__list .depth2 {
-  display: none;
   border-bottom: 0;
 }
 
@@ -1216,10 +1226,21 @@ table {
   font-size: 14px;
 }
 
+.lnb__list .depth2 .no-depth:last-child {
+  border-bottom: 0;
+}
+
+.lnb__list .depth2.active > a::after {
+  content: "\2212";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+}
+
 /* 비율 계산 */
 .ratio--16-9 {
   position: relative;
-  padding-bottom: 56.25% !important;
+  padding-bottom: 45.25% !important;
 }
 
 .ratio--16-9 .ratio__el {
@@ -1490,7 +1511,7 @@ table {
 }
 
 .sample-B .ly-right .huge-tit {
-  color: #73879C;
+  color: #3a4e63;
 }
 
 .sample-B .ly-right .huge-tit::before {
@@ -1509,13 +1530,21 @@ table {
   border-bottom-color: #223044;
 }
 
+.sample-B .lnb__list .depth1 > ul {
+  background: #203142;
+}
+
+.sample-B .lnb__list .depth2 > ul {
+  background: #131d27;
+}
+
 .sample-B .unit {
   border-color: #dbdee2;
 }
 
 .sample-B .unit__tit {
   background: #EDEDED;
-  color: #73879C;
+  color: #3a4e63;
 }
 
 .sample-B .unit__content {
@@ -1542,15 +1571,15 @@ table {
 }
 
 .sample-C .gnb-wrap {
-  background: #373737;
+  background: #2A3F54;
 }
 
 .sample-C .gnb-list .gnb-list__title {
-  color: #898989;
+  color: #ECF0F1;
 }
 
 .sample-C .gnb-list > li:hover .gnb-list__title::after {
-  background: #000;
+  background: #1c2f42;
 }
 
 .sample-C .ly-left {
@@ -1584,6 +1613,7 @@ table {
 }
 
 .sample-C .lnb__list .no-depth a::after {
+  right: 15px;
   width: 7px;
   border-top: 2px solid #898989;
   border-right: 2px solid #898989;
@@ -1591,6 +1621,18 @@ table {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   background: none;
+}
+
+.sample-C .lnb__list .depth1 > ul {
+  background: #d4d4cb;
+}
+
+.sample-C .lnb__list .depth2 > ul {
+  background: #b3b3a3;
+}
+
+.sample-C .lnb__list li:not(.no-depth) > a::after {
+  color: #898989;
 }
 
 .sample-C .unit {
