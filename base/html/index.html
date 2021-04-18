@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+	<title>BYDA VDS 관리시스템 퍼블리싱</title>
+	<style>
+		*{margin:0;padding:0;}
+		body {font-family:"맑은 고딕", sans-serif;}
+		ul{list-style: none;margin:0;padding:0;}
+		table {border-collapse:collapse; border-spacing:0;}
+		strong {font-weight:normal;}
+		body{margin:20px;}
+		h1{margin:0 0 10px 0;font-weight:normal;}
+		a {text-decoration:none;color:blue;}
+		a:hover {text-decoration:underline;}
+		.list_w p.tit {padding-bottom:3px;background:#666;color:#fff;font-size:18px;border:0;line-height:40px;text-align:center;}
+		.codinglist {width:100%;text-align:center;}
+		.codinglist th {background:#efefef;color:#333;}
+		.codinglist th,
+		.codinglist td {border:1px solid #ccc;vertical-align:middle;padding:5px;font-size:14px;}
+		.codinglist td:last-child {text-align:left;}
+		.codinglist tr:hover,
+		.codinglist tr.bg {background:#efefef;}
+
+		.border-topline td {border-top:3px solid #333;}
+		.bgss {background:#222;color:#fff;}
+		.bgss a {color:#fff;}
+		.bgss:hover {background:#efefef;color:#333;}
+		.bgss:hover a {color:#333;}
+    .red-txt{color:#c5182d;font-weight: bold;}
+    .red-txt2{color:red;font-weight: bold;}
+    .green-txt {color:green;font-weight: bold;}
+	</style>
+</head>
+<body>
+	<h1>BYDA VDS 관리시스템 퍼블리싱</h1>
+	<div class="list_w">
+		<p class="tit">퍼블리싱 리스트</p>
+		<table class="codinglist">
+			<colgroup>
+				<col style="width:3%;" />
+				<col />
+				<col />
+				<col />
+				<col />
+				<col />
+				<col style="width:8%;" />
+				<col style="width:4%;" />
+				<col style="width:27%;"  />
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan="2">no.</th>
+					<th colspan="4">navi</th>
+					<th rowspan="2">filename</th>
+					<th rowspan="2">type</th>
+					<th rowspan="2">상태</th>
+					<th rowspan="2">etc.</th>
+				</tr>
+				<tr>
+					<th>depth1</th>
+					<th>depth2</th>
+					<th>depth3</th>
+					<th>depth4</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td><!-- 번호 -->
+					<td style="font-weight: bold;color:darkblue">테마색상A</td><!-- depth1 -->
+					<td></td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/sample/A.html" style="font-size: 20px;color:darkblue">A</a></td>
+					<td></td>
+					<td class="green-txt">-</td>
+					<td></td>
+        </tr>
+				<tr>
+					<td></td><!-- 번호 -->
+					<td style="font-weight: bold;color:darkblue">테마색상B</td><!-- depth1 -->
+					<td></td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/sample/B.html" style="font-size: 20px;color:darkblue">B</a></td>
+					<td></td>
+					<td class="green-txt">-</td>
+					<td></td>
+        </tr>
+				<tr>
+					<td></td><!-- 번호 -->
+					<td style="font-weight: bold;color:darkblue">테마색상C</td><!-- depth1 -->
+					<td></td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/sample/C.html" style="font-size: 20px;color:darkblue">C</a></td>
+					<td></td>
+					<td class="green-txt">-</td>
+					<td></td>
+        </tr>
+        <tr>
+					<td></td><!-- 번호 -->
+					<td>공통</td><!-- depth1 -->
+					<td>시스템 팝업 / 모달 팝업</td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/common/popup.html">popup</a></td>
+					<td></td>
+					<td class="green-txt">완료</td>
+					<td>- 모달 팝업 가이드 페이지 입니다.</td>
+        </tr>
+        <tr>
+					<td></td><!-- 번호 -->
+					<td></td><!-- depth1 -->
+					<td>에러 페이지</td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/common/error.html">error</a></td>
+					<td></td>
+					<td class="green-txt">완료</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>인천대교</td>
+					<td>모니터링(단/양방향)</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/incheon/vds1000.html">vds1000</a></td>
+					<td></td>
+					<td class="red-txt">대기</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>설정관리</td>
+					<td>지점관리</td>
+					<td></td>
+					<td><a href="/base/html/incheon/vds2000.html">vds2000</a></td>
+					<td></td>
+					<td class="red-txt">대기</td>
+					<td></td>
+				</tr>
+        <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>삭제경고</td>
+					<td><a href="/base/html/incheon/vds2100.html">vds2100</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">대기</td>
+					<td></td>
+				</tr>
+        <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>장치관리</td>
+					<td><a href="/base/html/incheon/vds2200.html">vds2200</a></td>
+					<td></td>
+					<td class="red-txt">대기</td>
+					<td></td>
+				</tr>
+        <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>장치관리</td>
+					<td></td>
+					<td><a href="/base/html/incheon/vds2300.html">vds2300</a></td>
+					<td></td>
+					<td class="red-txt">대기</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		$(function(){
+			$(".codinglist tr").each(function() {
+				var index = $(".codinglist tbody tr").index(this)+1;
+				$(this).children("td:first-child").text(index);
+				$(this).children("td").find('a').attr('target', '_blank');
+			});
+			$(".codinglist tr").on('click', function(){
+				$(".codinglist tr").removeClass('bg');
+				$(this).addClass('bg');
+			});
+		});
+	</script>
+</body>
+</html>
