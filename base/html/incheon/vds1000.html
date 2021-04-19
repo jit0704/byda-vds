@@ -31,20 +31,25 @@
               <li class="no-depth"><a href="#">대메뉴2</a></li>
               <li class="depth1">
                 <a href="#">대메뉴3</a>
-                <ul>
-                  <li class="no-depth"><a href="#">중메뉴3-1</a></li>
-                  <li class="no-depth"><a href="#">중메뉴3-2</a></li>
-                  <li class="no-depth"><a href="#">중메뉴3-3</a></li>
+                <ul class="hidden">
+                  <li class="depth2">
+                    <a href="#">중메뉴3-1</a>
+                    <ul>
+                      <li class="no-depth"><a href="#">소메뉴3-1-1</a></li>
+                      <li class="no-depth"><a href="#">소메뉴3-1-2</a></li>
+                      <li class="no-depth"><a href="#">소메뉴3-1-3</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
-              <li class="depth1">
+              <li class="depth1 active">
                 <a href="#">대메뉴4</a>
                 <ul>
-                  <li class="depth2">
+                  <li class="depth2 active">
                     <a href="#">중메뉴4-1</a>
                     <ul>
                       <li class="no-depth"><a href="#">소메뉴4-1-1</a></li>
-                      <li class="no-depth"><a href="#">소메뉴4-1-2</a></li>
+                      <li class="no-depth"><a href="#" class="selected">소메뉴4-1-2</a></li>
                       <li class="no-depth"><a href="#">소메뉴4-1-3</a></li>
                     </ul>
                   </li>
@@ -58,11 +63,13 @@
 
         <div class="ly-right">
           <h3 class="huge-tit">공항방면 10+002</h3>
-          <div class="box-wrap__algin divide5-5">
+          <div class="box-wrap__algin divide5-5 vds1000">
 
             <div class="box-wrap__algin--left">
               <div class="unit">
-                <em class="unit__tit">CAMERA IP</em>
+                <em class="unit__tit">CAMERA IP
+                  <button type="button" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></button>
+                </em>
                 <div class="unit__content ratio--16-9">
                   <div id="player_id" class="ratio__el">
                     <video id="ipcamera_video_id" autoplay playsinline controls muted width="100%" height="100%"></video>
@@ -73,8 +80,8 @@
               <div class="unit">
                 <em class="unit__tit">Statistical analysis</em>
                 <div class="unit__content">
-                  <div class="list-table">
-                    <table class="list-table__bordered">
+                  <div class="list-table statis">
+                    <table>
                       <colgroup>
                         <col style="width:30%;" />
                         <col style="width:17.5%;" />
@@ -128,12 +135,12 @@
                   <div class="list-table">
                     <table class="list-table__bordered">
                       <colgroup>
-                        <col style="width:20%;" />
-                        <col style="width:16%;" />
-                        <col style="width:16%;" />
-                        <col style="width:16%;" />
-                        <col style="width:16%;" />
-                        <col style="width:16%;" />
+                        <col style="width:30%;" />
+                        <col style="width:14%;" />
+                        <col style="width:14%;" />
+                        <col style="width:14%;" />
+                        <col style="width:14%;" />
+                        <col style="width:14%;" />
                       </colgroup>
                       <thead>
                         <tr>
@@ -147,7 +154,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>2020-01-01 13:11:13.111</td>
+                          <td>2020-01-01 13:11:13</td>
                           <td>송도방면</td>
                           <td>1</td>
                           <td>56 km/h</td>
@@ -155,7 +162,7 @@
                           <td>과속</td>
                         </tr>
                         <tr>
-                          <td>2020-01-01 13:11:13.111</td>
+                          <td>2020-01-01 13:11:13</td>
                           <td>송도방면</td>
                           <td>1</td>
                           <td>56 km/h</td>
@@ -163,7 +170,7 @@
                           <td>과속</td>
                         </tr>
                         <tr>
-                          <td>2020-01-01 13:11:13.111</td>
+                          <td>2020-01-01 13:11:13</td>
                           <td>송도방면</td>
                           <td>1</td>
                           <td>56 km/h</td>
@@ -171,7 +178,95 @@
                           <td>과속</td>
                         </tr>
                         <tr>
-                          <td>2020-01-01 13:11:13.111</td>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
+                          <td>송도방면</td>
+                          <td>1</td>
+                          <td>56 km/h</td>
+                          <td>대형</td>
+                          <td>과속</td>
+                        </tr>
+                        <tr>
+                          <td>2020-01-01 13:11:13</td>
                           <td>송도방면</td>
                           <td>1</td>
                           <td>56 km/h</td>
@@ -190,6 +285,8 @@
 
           </div>
           <!-- //box-wrap__algin -->
+
+          <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
         </div>
         <!-- //ly-right -->
       </div>
