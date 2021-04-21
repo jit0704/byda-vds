@@ -174,21 +174,33 @@ table {
   padding-bottom: 5px;
 }
 
-.ly-right__content .box-wrap__algin--left {
+.ly-right__content--left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.ly-right__content--right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding-left: 15px;
+}
+
+.ly-right__content--right .unit {
+  height: 100%;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--left {
   -webkit-box-flex: 3.8;
       -ms-flex: 3.8 0 auto;
           flex: 3.8 0 auto;
 }
 
-.ly-right__content .box-wrap__algin--right {
+.ly-right .ratio--6-4 .ly-right__content--right {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding-left: 15px;
-}
-
-.ly-right__content .box-wrap__algin--right .unit {
-  height: 100%;
 }
 
 .ly-right .huge-tit {
@@ -842,11 +854,13 @@ table {
 }
 
 .gnb-list > li.menu-set .gnb-list__title::before {
-  background-position: -60px 0;
+  background: url(/base/images/icon_set.png) no-repeat 0 0;
+  background-size: contain;
 }
 
 .gnb-list > li.menu-set:hover .gnb-list__title::before {
-  background-position: -90px 0;
+  background: url(/base/images/icon_set_active.png) no-repeat 0 0;
+  background-size: contain;
 }
 
 .gnb-list > li.menu-set:hover .gnb-list__title::after {
@@ -1029,7 +1043,7 @@ table {
 
 .list-table__bodyscroll .list-table__inner {
   height: 100%;
-  border-radius: 0 0 8px 8px;
+  overflow-y: scroll;
 }
 
 .list-table__bodyscroll .list-table__headerbg {
@@ -1037,19 +1051,24 @@ table {
   left: 0;
   top: 0;
   width: 100%;
-  height: 52px;
-  background: #141724;
+  height: 50px;
+  background: rgba(52, 73, 94, 0.94);
 }
 
 .list-table__bodyscroll .fixed-th {
   position: absolute;
-  top: 12px;
+  top: 14px;
   text-align: center;
 }
 
 .list-table__bodyscroll thead th {
   height: 0 !important;
   padding: 0 !important;
+  text-align: left;
+}
+
+.is-bodyscroll {
+  overflow: hidden;
 }
 
 /* 페이징 */
@@ -1171,15 +1190,12 @@ table {
   overflow-y: auto;
 }
 
-.lnb__list li {
-  border-bottom: 1px solid #223044;
-}
-
 .lnb__list a {
   position: relative;
   display: block;
   padding: 15px 10px 15px 0;
   color: #bfbfbf;
+  border-bottom: 1px solid #6a7688;
 }
 
 .lnb__list > li > a {
@@ -1200,10 +1216,6 @@ table {
           transform: rotate(90deg);
 }
 
-.lnb__list .depth1 > ul {
-  background: #203142;
-}
-
 .lnb__list .depth1 > ul a::before {
   content: "ㄴ";
   display: inline-block;
@@ -1221,21 +1233,9 @@ table {
           transform: rotate(180deg);
 }
 
-.lnb__list .depth2 {
-  border-bottom: 0;
-}
-
-.lnb__list .depth2 > ul {
-  background: #131d27;
-}
-
 .lnb__list .depth2 > ul > li > a {
   padding-left: 40px;
   font-size: 14px;
-}
-
-.lnb__list .depth2 .no-depth:last-child {
-  border-bottom: 0;
 }
 
 .lnb__list .depth2.active > a::after {
@@ -1247,13 +1247,13 @@ table {
   background: #1f2a35;
 }
 
-/* 비율 계산 */
-.ratio--16-9 {
+/* 비디오 영역 */
+.video__fluid {
   position: relative;
-  padding-bottom: 55.2% !important;
+  height: calc(100% - 40px);
 }
 
-.ratio--16-9 .ratio__el {
+.video__fluid__el {
   position: absolute;
   top: 0;
   left: 0;
@@ -1263,7 +1263,7 @@ table {
 
 /* 컨텐츠에 들어가는 작은 박스 디자인 */
 .unit {
-  border: 1px solid #dbdee2;
+  border: 1px solid #a8abaf;
 }
 
 .unit + .unit {
@@ -1273,17 +1273,40 @@ table {
 .unit__tit {
   position: relative;
   display: block;
-  padding: 8px;
-  color: #2a3f54;
+  padding: 0 8px;
+  line-height: 40px;
+  color: #102942;
   font-size: 18px;
   font-weight: 800;
-  background: #bed6ee;
+  background: #66a0da;
 }
 
 .unit__tit .btn-expand {
   position: absolute;
   top: 1px;
-  right: 1px;
+  right: 10px;
+}
+
+.fluid__target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.fluid__target__unit {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.fluid__target__none {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /* 로그인 */

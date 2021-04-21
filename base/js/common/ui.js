@@ -5,6 +5,9 @@ $(function(){
   }
   cmmnui();
   loginForm();
+  if ($('.list-table__bodyscroll', '.unit').length !== 0) {
+    $(window).on('resize', unitBodyscrollHeight).resize();
+  }
 });
 
 // 공통 UI
@@ -98,4 +101,13 @@ function loginForm () {
   $txtInput.on('blur', function(){
     $(this).parent().removeClass('active');
   });
+}
+
+// unit요소 안에 bodyscroll요소의 높이값 셋팅
+function unitBodyscrollHeight () {
+  var $tblEl = $('.list-table__inner');
+  var $ancestorH;
+  $tblEl.closest('.unit').addClass('is-bodyscroll');
+  $ancestorH = $tblEl.closest('.is-bodyscroll').height();
+  $tblEl.css('height', $ancestorH - 90);
 }
