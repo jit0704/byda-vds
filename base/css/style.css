@@ -171,7 +171,7 @@ table {
   display: flex;
   height: calc(100% - 88px);
   overflow: hidden;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 .ly-right__content--left {
@@ -1275,10 +1275,10 @@ table {
   display: block;
   padding: 0 8px;
   line-height: 40px;
-  color: #102942;
+  color: #212637;
   font-size: 18px;
   font-weight: 800;
-  background: #66a0da;
+  background: #c5c5c5;
 }
 
 .unit__tit .btn-expand {
