@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>모니터링</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gnb-wrap" include-html="/base/html/incheon/gnb.html">
+      </div>
+      <!-- //gnb-wrap -->
+
+      <div class="container">
+
+        <div class="ly-left">
+          <div class="lnb" include-html="/base/html/incheon/lnb.html">
+          </div>
+          <!-- //lnb -->
+        </div>
+        <!-- //ly-left -->
+
+        <div class="ly-right">
+          <h3 class="huge-tit">장치관리</h3>
+          <div class="ly-right__content ratio--100per">
+            <div class="list-table">
+              <table class="list-table__bordered--input">
+                <colgroup>
+                  <col style="width:20%;" />
+                  <col style="width:80%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2">현장 정보</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>지점 명</th>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>현장 위치<i class="bul__star">*</i></th>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="list-table__bordered--input">
+                <colgroup>
+                  <col style="width:20%;" />
+                  <col style="width:26.66%;" />
+                  <col style="width:26.66%;" />
+                  <col style="width:26.66%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="4">RADAR 정보</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>로컬 제어기 IP<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>로컬 제어기 ID<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>RADAR 제어 ID<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr class="row-adjust">
+                    <th rowspan="2">RADAR 하행 (-)<i class="bul__star">*</i></th>
+                    <th>방향 명</th>
+                    <th>차로 수</th>
+                    <th>차로 번호</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="input__style2"></td>
+                    <td><input type="text" class="input__style2"></td>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr class="row-adjust">
+                    <th rowspan="2">RADAR 상행 (+)<i class="bul__star">*</i></th>
+                    <th>방향 명</th>
+                    <th>차로 수</th>
+                    <th>차로 번호</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="input__style2"></td>
+                    <td><input type="text" class="input__style2"></td>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="list-table__bordered--input">
+                <colgroup>
+                  <col style="width:20%;" />
+                  <col style="width:80%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2">CAMERA 정보</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>CAMERA ID IP<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>해상도<i class="bul__star">*</i></th>
+                    <td>
+                      <div class="flex__content flex__content--jusi-sb">
+                        <input type="text" class="input__style2">
+                        <span style="align-self: center;padding: 0 20px;">X</span>
+                        <input type="text" class="input__style2">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>StreamURL<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>Application Name<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>StreamName<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th>RTSP 주소</th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //list-table -->
+          </div>
+          <!-- //ly-right__content -->
+
+          <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
+        </div>
+        <!-- //ly-right -->
+      </div>
+      <!-- //container -->
+
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

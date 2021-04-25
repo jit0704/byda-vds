@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>장치관리 팝업</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="ex1" class="modal">
+        <div class="modal-popup">
+          <div class="modal-popup__header">
+            <span class="modal-popup__title">장치관리</span>
+          </div>
+          <!-- //modal-popup__header -->
+          <div class="modal-popup__content">
+            <div class="modal-popup__table">
+              <table>
+                <colgroup>
+                  <col style="width:25%;" />
+                  <col style="width:75%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2"><span class="table__subtit">현장 정보</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>지점 명</th>
+                    <td><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>현장 위치<i class="bul__star">*</i></th>
+                    <td><input type="text" class="input__style1"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table>
+                <colgroup>
+                  <col style="width:25%;" />
+                  <col style="width:25%;" />
+                  <col style="width:25%;" />
+                  <col style="width:25%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="4"><span class="table__subtit">RADAR 정보</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>로컬 제어기 IP<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>로컬 제어기 ID<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>RADAR 제어 ID<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr class="row-adjust">
+                    <th rowspan="2">RADAR 하행 (-)<i class="bul__star">*</i></th>
+                    <th>방향 명</th>
+                    <th>차로 수</th>
+                    <th>차로 번호</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="input__style1"></td>
+                    <td><input type="text" class="input__style1"></td>
+                    <td><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr class="row-adjust">
+                    <th rowspan="2">RADAR 상행 (+)<i class="bul__star">*</i></th>
+                    <th>방향 명</th>
+                    <th>차로 수</th>
+                    <th>차로 번호</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" class="input__style1"></td>
+                    <td><input type="text" class="input__style1"></td>
+                    <td><input type="text" class="input__style1"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table>
+                <colgroup>
+                  <col style="width:25%;" />
+                  <col style="width:35%;" />
+                  <col style="width:5%;" />
+                  <col style="width:35%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="4"><span class="table__subtit">CAMERA 정보</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>CAMERA ID IP<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>해상도<i class="bul__star">*</i></th>
+                    <td><input type="text" class="input__style1"></td>
+                    <th class="pdr0 txt-align__center">X</th>
+                    <td><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>StreamURL<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>Application Name<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>StreamName<i class="bul__star">*</i></th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                  <tr>
+                    <th>RTSP 주소</th>
+                    <td colspan="3"><input type="text" class="input__style1"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //modal-popup__table -->
+          </div>
+          <!-- //modal-popup__content -->
+          <span class="modal-popup__btn txt-align__center">
+            <a href="# " rel="modal:close" class="btn__regular btn__regular--reduce btn__bg--style1">저장</a>
+          </span>
+          <!-- //modal-popup__btn-wrap -->
+        </div>
+        <!-- //modal-popup -->
+      </div>
+
+      <a href="#ex1" class="btn__modal--open" style="display: none;">등록</a> <!-- 퍼블리싱 확인용 버튼 -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용
+      $(function () {
+        $('.btn__modal--open').trigger('click');
+      });
+    </script>
+  </body>
+</html>

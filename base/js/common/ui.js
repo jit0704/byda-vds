@@ -1,13 +1,16 @@
 // publishing UI javascript
 $(function(){
   if ($('[include-html]').length !== 0) {
-    includeHTML(); // gnb include (퍼블리싱 확인용)
+    includeHTML(); // HTML include (퍼블리싱 확인용)
   }
   cmmnui();
   loginForm();
+  // 210425 추가
   if ($('.list-table__bodyscroll', '.unit').length !== 0) {
     $(window).on('resize', unitBodyscrollHeight).resize();
   }
+  // 210425 추가
+  setTimeout(lnb, 50); // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, lnb함수만 적용해주시면 됩니다.
 });
 
 // 공통 UI
@@ -65,31 +68,6 @@ function cmmnui () {
   $('.multi-selectbox__confirm').on('click', function(){
     $('.multi-selectbox__btn').trigger('click');
   });
-
-  // datepicker
-  // 200824 기존 datepicker삭제
-  // $('.input-calendar').datepicker({
-  //   dateFormat: 'yy-mm-dd', //Input Display Format 변경
-  //   showMonthAfterYear: true, //년도 먼저 나오고, 뒤에 월 표시
-  //   yearSuffix: "년", //달력의 년도 부분 뒤에 붙는 텍스트
-  //   monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], //달력의 월 부분 텍스트
-  //   monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //달력의 월 부분 Tooltip 텍스트
-  //   dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], //달력의 요일 부분 텍스트
-  //   dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
-  // });
-
-  // 모니터링 chart, 검지로그 컨텐츠 높이 체크 - 200802 추가
-  // 200811 삭제
-  // setTimeout(function(){
-  //   $(window).resize(function(){
-  //     var $defaultHeight = $('.monitering-content__ipcamera').height();
-  //     $('.monitering-item__content').each(function(){
-  //       if ( $(this).closest('.monitering-content__ipcamera').length === 0 ) {
-  //         $(this).css('height', $defaultHeight - 35);
-  //       }
-  //     });
-  //   }).resize();
-  // }, 50);
 }
 
 // 로그인 폼 영역 포커스
@@ -103,11 +81,43 @@ function loginForm () {
   });
 }
 
-// unit요소 안에 bodyscroll요소의 높이값 셋팅
+// unit요소 안에 bodyscroll요소의 높이값 셋팅 (210425 추가)
 function unitBodyscrollHeight () {
   var $tblEl = $('.list-table__inner');
   var $ancestorH;
   $tblEl.closest('.unit').addClass('is-bodyscroll');
   $ancestorH = $tblEl.closest('.is-bodyscroll').height();
   $tblEl.css('height', $ancestorH - 90);
+}
+
+// lnb (210425 추가)
+function lnb () {
+  if ($('.lnb').length !== 0) {
+    $('.lnb__list li').each(function(){
+      if ($(this).find('>ul').length > 0) {
+        return;
+      }
+      $(this).addClass('no-depth');
+    });
+
+    $(document).on('click', '.lnb__list li a', function(e){
+      e.stopPropagation();
+      var $this = $(this);
+      var $depthTarget = $this.next(); //ul
+      var $siblings = $this.parent().siblings(); //li 형제 요소들
+
+      $this.parent('li').find('ul li').removeClass('active');
+      $siblings.removeClass('active');
+      $siblings.find('ul').slideUp(200);
+
+      if ($depthTarget.css('display') == 'none') {
+        $this.parent().addClass('active');
+        $depthTarget.slideDown(200);
+      } else {
+        $depthTarget.slideUp(200);
+        $depthTarget.find('ul').slideUp(200);
+        $this.parent().removeClass('active');
+      }
+    });
+  }
 }

@@ -8,11 +8,8 @@
     <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
     <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
-    <script type="text/javascript" src="/base/js/lib/datepicker.min.js"></script>
-    <script type="text/javascript" src="/base/js/lib/datepicker.ko-KR.js"></script>
     <script type="text/javascript" src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="/base/css/datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
   </head>
   <body>
@@ -24,39 +21,8 @@
       <div class="container">
 
         <div class="ly-left">
-          <div class="lnb">
-            <h2 class="lnb__tit">인천대교</h2>
-            <ul class="lnb__list">
-              <li class="no-depth"><a href="#">중메뉴1</a></li>
-              <li class="no-depth"><a href="#">중메뉴2</a></li>
-              <li class="depth1">
-                <a href="#">중메뉴3</a>
-                <ul class="hidden">
-                  <li class="depth2">
-                    <a href="#">중메뉴3-1</a>
-                    <ul>
-                      <li class="no-depth"><a href="#">소메뉴3-1-1</a></li>
-                      <li class="no-depth"><a href="#">소메뉴3-1-2</a></li>
-                      <li class="no-depth"><a href="#">소메뉴3-1-3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="depth1 active">
-                <a href="#" class="selected">중메뉴4</a>
-                <ul>
-                  <li class="depth2 active">
-                    <a href="#" class="selected">소메뉴4-1</a>
-                    <a href="#" class="">소메뉴4-2</a>
-                    <ul class="hidden">
-                      <li class="no-depth"><a href="#">소메뉴4-1-1</a></li>
-                      <li class="no-depth"><a href="#">소메뉴4-1-2</a></li>
-                      <li class="no-depth"><a href="#">소메뉴4-1-3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+          <!-- 210425 lnb메뉴 수정 -->
+          <div class="lnb" include-html="/base/html/incheon/lnb.html">
           </div>
           <!-- //lnb -->
         </div>
@@ -94,6 +60,7 @@
                           <th>도로방향</th>
                           <th colspan="2">공항방면</th>
                           <th colspan="2">송도방면</th>
+                          <!-- <th colspan="4">송도방향</th> -->
                         </tr>
                       </thead>
                       <tbody>
@@ -328,7 +295,7 @@
             <!-- //ly-right__content--right -->
 
           </div>
-          <!-- //box-wrap__algin -->
+          <!-- //ly-right__content -->
 
           <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
         </div>
