@@ -30,124 +30,160 @@
         <div class="ly-right">
           <h3 class="huge-tit">장치관리</h3>
           <div class="ly-right__content ratio--100per">
-            <div class="list-table">
-              <table class="list-table__bordered--input">
-                <colgroup>
-                  <col style="width:20%;" />
-                  <col style="width:80%;" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th colspan="2">현장 정보</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>지점 명</th>
-                    <td><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>현장 위치<i class="bul__star">*</i></th>
-                    <td><input type="text" class="input__style2"></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="unit-table-wrap">
+              <button type="button" class="btn__regular btn__bg--style1">저장</button>
+              <div class="inner">
+                <div class="unit-table table-borderless">
+                  <em class="table-borderless__tit">현장 정보</em>
+                  <table>
+                    <colgroup>
+                      <col style="width:9%;">
+                      <col style="width:41%;">
+                      <col style="width:9%;">
+                      <col style="width:41%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>지점 명</span></th>
+                        <td>9+990 송도방향</td>
+                        <th><span>현장 위치</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //unit-table -->
 
-              <table class="list-table__bordered--input">
-                <colgroup>
-                  <col style="width:20%;" />
-                  <col style="width:26.66%;" />
-                  <col style="width:26.66%;" />
-                  <col style="width:26.66%;" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th colspan="4">RADAR 정보</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>로컬 제어기 IP<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>로컬 제어기 ID<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>RADAR 제어 ID<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr class="row-adjust">
-                    <th rowspan="2">RADAR 하행 (-)<i class="bul__star">*</i></th>
-                    <th>방향 명</th>
-                    <th>차로 수</th>
-                    <th>차로 번호</th>
-                  </tr>
-                  <tr>
-                    <td><input type="text" class="input__style2"></td>
-                    <td><input type="text" class="input__style2"></td>
-                    <td><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr class="row-adjust">
-                    <th rowspan="2">RADAR 상행 (+)<i class="bul__star">*</i></th>
-                    <th>방향 명</th>
-                    <th>차로 수</th>
-                    <th>차로 번호</th>
-                  </tr>
-                  <tr>
-                    <td><input type="text" class="input__style2"></td>
-                    <td><input type="text" class="input__style2"></td>
-                    <td><input type="text" class="input__style2"></td>
-                  </tr>
-                </tbody>
-              </table>
+                <div class="unit-table table-borderless">
+                  <em class="table-borderless__tit">RADAR 정보</em>
+                  <table>
+                    <colgroup>
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>로컬 제어기 ID</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>로컬 제어기 IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>로컬 제어기 PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>RADAR 제어기 ID</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>RADAR 제어기 IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>RADAR 제어기 PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
 
-              <table class="list-table__bordered--input">
-                <colgroup>
-                  <col style="width:20%;" />
-                  <col style="width:80%;" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th colspan="2">CAMERA 정보</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>CAMERA ID IP<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>해상도<i class="bul__star">*</i></th>
-                    <td>
-                      <div class="flex__content flex__content--jusi-sb">
-                        <input type="text" class="input__style2">
-                        <span style="align-self: center;padding: 0 20px;">X</span>
-                        <input type="text" class="input__style2">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>StreamURL<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>Application Name<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>StreamName<i class="bul__star">*</i></th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                  <tr>
-                    <th>RTSP 주소</th>
-                    <td colspan="3"><input type="text" class="input__style2"></td>
-                  </tr>
-                </tbody>
-              </table>
+                  <div class="table-borderless__sub">
+                    <em class="table-borderless__subtit">RADAR 하행(-)</em>
+                    <table>
+                      <colgroup>
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th><span>방향 명</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                          <th><span>차로 수</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                          <th><span>차로 번호</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <em class="table-borderless__subtit">RADAR 상행(+)</em>
+                    <table>
+                      <colgroup>
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                        <col style="width:16.66%;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th><span>방향 명</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                          <th><span>차로 수</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                          <th><span>차로 번호</span></th>
+                          <td><input type="text" class="input__style2"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //table-borderless__sub -->
+                </div>
+                <!-- //unit-table -->
+
+                <div class="unit-table table-borderless">
+                  <em class="table-borderless__tit">CAMERA 정보</em>
+                  <table>
+                    <colgroup>
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                      <col style="width:16.66%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>CAMERA ID</span></th>
+                        <td>AUTO</td>
+                        <th><span>CAMERA IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>CAMERA PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>Application Name</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>Stream Name</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>해상도</span></th>
+                        <td>
+                          <div class="flex__content display">
+                            <input type="text" class="input__style2">
+                            <span>X</span>
+                            <input type="text" class="input__style2">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th><span>Stream URL</span></th>
+                        <td colspan="5"><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>RTSP 주소</span></th>
+                        <td colspan="5"><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //unit-table -->
+              </div>
+              <!-- //inner -->
             </div>
-            <!-- //list-table -->
+            <!-- //unit-table-wrap -->
           </div>
           <!-- //ly-right__content -->
 
