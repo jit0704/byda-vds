@@ -305,5 +305,15 @@
 
     </div>
     <!-- //wrapper -->
+
+    <script>
+      $(function(){
+        setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
+          lnb.init(); // lnb 초기화 함수
+          lnb.clickTrger(); // lnb 첫번째 메뉴 호출 함수
+          // lnb.clickTrger(function(){}); 첫번째 메뉴 호출 뒤 callback 함수가 필요시 사용바랍니다.
+        }, 50);
+      });
+    </script>
   </body>
 </html>

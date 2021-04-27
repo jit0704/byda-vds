@@ -9,8 +9,6 @@ $(function(){
   if ($('.list-table__bodyscroll', '.unit').length !== 0) {
     $(window).on('resize', unitBodyscrollHeight).resize();
   }
-  // 210425 추가
-  setTimeout(lnb, 50); // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, lnb함수만 적용해주시면 됩니다.
 });
 
 // 공통 UI
@@ -25,23 +23,19 @@ function cmmnui () {
     return false;
   });
 
-  // gnb
+  // gnb 210427 수정
   setTimeout(function () { // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용하지 마세요.
-    var $gnb = $('.gnb');
-    var $gnbItem = $('.gnb-list__item');
     var $gnbSelector = '.gnb-list > li';
     $(document).on('mouseenter', $gnbSelector, function () {
       if ($(this).find('.gnb-list__item').length !== 0) {
-        $gnb.addClass('active');
-        $gnbItem.stop().slideDown(280);
+        $(this).children('.gnb-list__item').stop().slideDown(200);
         $('.datepicker-container').addClass('zindex0');
       } else {
         return;
       }
     });
     $(document).on('mouseleave', $gnbSelector, function () {
-      $gnb.removeClass('active');
-      $gnbItem.stop().slideUp(280);
+      $(this).children('.gnb-list__item').stop().slideUp(200);
       $('.datepicker-container').removeClass('zindex0');
     });
   }, 100);
@@ -90,8 +84,10 @@ function unitBodyscrollHeight () {
   $tblEl.css('height', $ancestorH - 90);
 }
 
-// lnb (210425 추가)
-function lnb () {
+// lnb (210427 수정) 
+var lnb = {};
+var trgIdx = [];
+lnb.init = function () {
   if ($('.lnb').length !== 0) {
     $('.lnb__list li').each(function(){
       if ($(this).find('>ul').length > 0) {
@@ -119,5 +115,21 @@ function lnb () {
         $this.parent().removeClass('active');
       }
     });
+  }
+}
+
+lnb.clickTrger = function (callback) {
+  var $target = $('.lnb__list > li');
+  $target.each(function(idx){
+    if ($(this).hasClass('')) {
+      trgIdx.push(idx);
+    }
+  });
+  $target.eq(trgIdx[0]).children('a').trigger('click');
+
+  if (typeof callback === 'function') {
+    callback();
+  } else {
+    return;
   }
 }
