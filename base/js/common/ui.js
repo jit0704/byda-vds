@@ -118,18 +118,24 @@ lnb.init = function () {
   }
 }
 
-lnb.clickTrger = function (callback) {
-  var $target = $('.lnb__list > li');
-  $target.each(function(idx){
-    if ($(this).hasClass('')) {
-      trgIdx.push(idx);
-    }
-  });
-  $target.eq(trgIdx[0]).children('a').trigger('click');
+// lnb.clickTrger = function (callback) {
+//   var $target = $('.lnb__list > li');
+//   $target.each(function(idx){
+//     if ($(this).hasClass('')) {
+//       trgIdx.push(idx);
+//     }
+//   });
+//   $target.eq(trgIdx[0]).children('a').trigger('click');
 
-  if (typeof callback === 'function') {
-    callback();
-  } else {
-    return;
-  }
+//   if (typeof callback === 'function') {
+//     callback();
+//   } else {
+//     return;
+//   }
+// }
+
+// 210428 추가 : 현재 페이지에 대한 lnb 메뉴 활성화
+lnb.currentActive = function (clickedEl){
+  $target = $(clickedEl);
+  $target.addClass('selected').closest('ul').prev('a').trigger('click');
 }

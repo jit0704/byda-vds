@@ -36,11 +36,12 @@
                 <div class="unit-table table-borderless">
                   <em class="table-borderless__tit">현장 정보</em>
                   <table>
+                    <!-- 210428 col width값 수정 -->
                     <colgroup>
-                      <col style="width:9%;">
-                      <col style="width:41%;">
-                      <col style="width:9%;">
-                      <col style="width:41%;">
+                      <col style="width:16.5%;">
+                      <col style="width:16.8%;">
+                      <col style="width:16.7%;">
+                      <col>
                     </colgroup>
                     <tbody>
                       <tr>
@@ -75,11 +76,11 @@
                         <td><input type="text" class="input__style2"></td>
                       </tr>
                       <tr>
-                        <th><span>RADAR 제어기 ID</span></th>
+                        <th><span>RADAR 제어 ID</span></th>
                         <td><input type="text" class="input__style2"></td>
-                        <th><span>RADAR 제어기 IP</span></th>
+                        <th><span>RADAR 제어 IP</span></th>
                         <td><input type="text" class="input__style2"></td>
-                        <th><span>RADAR 제어기 PORT</span></th>
+                        <th><span>RADAR 제어 PORT</span></th>
                         <td><input type="text" class="input__style2"></td>
                       </tr>
                     </tbody>
@@ -200,8 +201,7 @@
       $(function(){
         setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
           lnb.init(); // lnb 초기화 함수
-          lnb.clickTrger(); // lnb 첫번째 메뉴 호출 함수
-          // lnb.clickTrger(function(){}); 첫번째 메뉴 호출 뒤 callback 함수가 필요시 사용바랍니다.
+          lnb.currentActive('#test2'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
       });
     </script>

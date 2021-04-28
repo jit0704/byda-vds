@@ -106,8 +106,8 @@
                         <colgroup>
                           <col style="width:30%;" />
                           <col style="width:14%;" />
-                          <col style="width:14%;" />
-                          <col style="width:14%;" />
+                          <col style="width:11%;" />
+                          <col style="width:17%;" />
                           <col style="width:14%;" />
                           <col style="width:14%;" />
                         </colgroup>
@@ -115,8 +115,8 @@
                           <tr>
                             <th><span class="fixed-th" style="width:30%;">검지시간</span></th>
                             <th><span class="fixed-th" style="width:14%;">방향</span></th>
-                            <th><span class="fixed-th" style="width:14%;">차로</span></th>
-                            <th><span class="fixed-th" style="width:14%;">속도</span></th>
+                            <th><span class="fixed-th" style="width:11%;">차로</span></th>
+                            <th><span class="fixed-th" style="width:17%;">속도</span></th>
                             <th><span class="fixed-th" style="width:14%;">차종</span></th>
                             <th><span class="fixed-th" style="width:14%;">비고</span></th>
                           </tr>
@@ -310,8 +310,7 @@
       $(function(){
         setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
           lnb.init(); // lnb 초기화 함수
-          lnb.clickTrger(); // lnb 첫번째 메뉴 호출 함수
-          // lnb.clickTrger(function(){}); 첫번째 메뉴 호출 뒤 callback 함수가 필요시 사용바랍니다.
+          lnb.currentActive('#test1'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
       });
     </script>
