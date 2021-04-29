@@ -86,7 +86,6 @@ function unitBodyscrollHeight () {
 
 // lnb (210427 수정) 
 var lnb = {};
-var trgIdx = [];
 lnb.init = function () {
   if ($('.lnb').length !== 0) {
     $('.lnb__list li').each(function(){
@@ -118,21 +117,17 @@ lnb.init = function () {
   }
 }
 
-// lnb.clickTrger = function (callback) {
-//   var $target = $('.lnb__list > li');
-//   $target.each(function(idx){
-//     if ($(this).hasClass('')) {
-//       trgIdx.push(idx);
-//     }
-//   });
-//   $target.eq(trgIdx[0]).children('a').trigger('click');
+lnb.select = function (clickedEl){
+  lnb.removeSelect();
+  $target = $(clickedEl);
+  $target.addClass('selected');
+}
 
-//   if (typeof callback === 'function') {
-//     callback();
-//   } else {
-//     return;
-//   }
-// }
+lnb.removeSelect = function (){
+  $('.lnb__list li a').each(function(i, e){
+  $(this).removeClass('selected');
+  });
+}
 
 // 210428 추가 : 현재 페이지에 대한 lnb 메뉴 활성화
 lnb.currentActive = function (clickedEl){

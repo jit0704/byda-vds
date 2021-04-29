@@ -605,9 +605,9 @@ table {
   line-height: 35px;
   padding: 0 10px;
   background: #fff;
-  color: #666;
+  color: #222;
   border: 1px solid #d5d5d5;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .input-calendar {
@@ -1224,10 +1224,10 @@ table {
 }
 
 .table-borderless + .table-borderless {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.table-borderless__tit, .table-borderless__subtit {
+.table-borderless__tit {
   display: block;
   width: 100%;
   padding: 0 0 10px 10px;
@@ -1239,23 +1239,12 @@ table {
           box-sizing: border-box;
 }
 
-.table-borderless__subtit {
-  margin-top: 10px;
-  font-size: 18px;
-  border-color: #999;
-}
-
-.table-borderless > table {
-  width: 97%;
-  margin-left: auto;
-}
-
 .table-borderless table {
   color: #000;
 }
 
 .table-borderless table tbody th {
-  padding: 10px 12px 10px 0;
+  padding: 10px 12px 10px 30px;
   text-align: left;
 }
 
@@ -1264,14 +1253,19 @@ table {
   display: inline-block;
   width: 3px;
   height: 3px;
-  margin-right: 8px;
+  margin-top: -1px;
+  margin-right: 15px;
   border-radius: 100%;
   background: #000;
   vertical-align: middle;
 }
 
 .table-borderless table tbody td {
-  padding: 10px 12px 10px 0;
+  padding: 13px 0 13px 0;
+}
+
+.table-borderless table tbody td:last-child {
+  padding-right: 12px;
 }
 
 .table-borderless table tbody .flex__content.display span {
@@ -1279,15 +1273,6 @@ table {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0 15px;
-}
-
-.table-borderless__sub {
-  padding-left: 20px;
-}
-
-.table-borderless__sub > table {
-  width: 98.5%;
-  margin-left: auto;
 }
 
 /* 헤더 고정 테이블(body scroll) */
@@ -1612,6 +1597,7 @@ table {
           flex: 0 0 auto;
   padding: 10px 10px 0;
   background: #fff;
+  border: 1px solid #d5d5d5;
 }
 
 .unit-table:last-child {
@@ -1645,24 +1631,16 @@ table {
           flex-direction: column;
 }
 
-.unit-table.table-borderless table {
-  width: 98.8%;
-}
-
-.unit-table.table-borderless table tbody th {
-  padding-left: 10px;
-}
-
-.unit-table.table-borderless .table-borderless__sub > table {
-  width: 100%;
-}
-
 .unit-table .input__style2 {
   height: 33px;
   line-height: 33px;
 }
 
 /* 모니터링 화면 > 통계분석 테이블 */
+.list-table.statis thead th {
+  height: 40px;
+}
+
 .list-table.statis thead th[colspan] {
   background: rgba(74, 99, 123, 0.94);
 }
@@ -1681,19 +1659,54 @@ table {
   border-left: 1px solid #dee2e6;
 }
 
+.list-table.statis tbody tr:not(:first-child) td {
+  height: 50px;
+}
+
 /* 모니터링 화면 > 검지 테이블 */
 .list-table--gumji tbody td {
   color: #6d707d;
 }
 
+/* 모니터링 통계 분석 테이블 높이 조절 */
+@media screen and (min-height: 1022px) and (max-height: 1149px) {
+  .list-table.statis table {
+    height: 206px;
+  }
+  .list-table.statis table thead th {
+    height: 45px;
+  }
+}
+
+@media screen and (min-height: 1150px) and (max-height: 1225px) {
+  .list-table.statis table {
+    height: 226px;
+  }
+  .list-table.statis table thead th {
+    height: 50px;
+  }
+}
+
+@media screen and (min-height: 1226px) {
+  .list-table.statis table {
+    height: 260px;
+  }
+  .list-table.statis table thead th {
+    height: 59px;
+  }
+}
+
 /* IE전용 style */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .table-borderless table tbody .flex__content.display {
-    width: 248px;
+    width: 280px;
   }
   .table-borderless table tbody .flex__content.display .input__style2 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+  .modal-popup__content .table-borderless th {
+    letter-spacing: -1.4px;
   }
 }
