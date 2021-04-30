@@ -130,6 +130,10 @@ table {
   max-width: 1230px !important;
 }
 
+.bg-gray {
+  background: #F7F7F7 !important;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -207,7 +211,7 @@ table {
 }
 
 .ly-right__content--right {
-  min-width: 680px;
+  width: 680px;
   padding-left: 15px;
 }
 
@@ -229,9 +233,9 @@ table {
 }
 
 .ly-right .ratio--6-4 .ly-right__content--right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .ly-right .huge-tit {
@@ -407,7 +411,7 @@ table {
 
 .modal .modal-popup__btn {
   display: block;
-  margin: 5px 0 15px;
+  margin: 15px 0;
   text-align: center;
 }
 
@@ -605,7 +609,7 @@ table {
   line-height: 35px;
   padding: 0 10px;
   background: #fff;
-  color: #222;
+  color: #6d707d;
   border: 1px solid #d5d5d5;
   font-weight: 700;
 }
@@ -1224,7 +1228,7 @@ table {
 }
 
 .table-borderless + .table-borderless {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .table-borderless__tit {
@@ -1592,18 +1596,9 @@ table {
 
 /* 페이지에 삽입되는 팝업 테이블과 디자인이 동일한 일반 테이블 */
 .unit-table {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
   padding: 10px 10px 0;
   background: #fff;
   border: 1px solid #d5d5d5;
-}
-
-.unit-table:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .unit-table-wrap {
@@ -1622,13 +1617,6 @@ table {
 .unit-table-wrap .inner {
   height: 100%;
   overflow-y: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .unit-table .input__style2 {
@@ -1666,6 +1654,7 @@ table {
 /* 모니터링 화면 > 검지 테이블 */
 .list-table--gumji tbody td {
   color: #6d707d;
+  font-size: 14px;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */
@@ -1705,6 +1694,9 @@ table {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+  .modal-popup__content .table-borderless table tbody .flex__content.display {
+    width: 183px;
   }
   .modal-popup__content .table-borderless th {
     letter-spacing: -1.4px;

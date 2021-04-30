@@ -13,21 +13,21 @@
   </head>
   <body>
     <div class="wrapper">
-      <div id="ex1" class="modal">
+      <div id="ex1" class="modal bg-gray"> <!-- 210430 bg-gray 클래스 추가 -->
         <div class="modal-popup mw1230">
           <div class="modal-popup__header">
             <span class="modal-popup__title">장치관리</span>
           </div>
           <!-- //modal-popup__header -->
           <div class="modal-popup__content">
-            <div class="table-borderless">
+            <div class="unit-table table-borderless"> <!-- 210430 unit-table 클래스 추가(아래 테이블도 똑같이 적용해주세요.) -->
               <em class="table-borderless__tit">현장 정보</em>
               <table>
-                <!-- 210429 col width값 수정 -->
+                <!-- 210430 col width값 수정 -->
                 <colgroup>
+                  <col style="width:17.2%;">
+                  <col style="width:16.1%;">
                   <col style="width:16.6%;">
-                  <col style="width:16.8%;">
-                  <col style="width:16%;">
                   <col>
                 </colgroup>
                 <tbody>
@@ -42,17 +42,17 @@
             </div>
             <!-- //table-borderless -->
 
-            <div class="table-borderless">
+            <div class="unit-table table-borderless">
               <em class="table-borderless__tit">RADAR 정보</em>
               <table>
-                <!-- 210429 col width값 수정 -->
+                <!-- 210430 col width값 수정 -->
                 <colgroup>
-                  <col style="width:16%;">
-                  <col style="width:17.33%;">
-                  <col style="width:16%;">
-                  <col style="width:17.33%;">
-                  <col style="width:18%;">
-                  <col style="width:15.33%;">
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:18.66%;">
+                  <col style="width:14.66%;">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -93,7 +93,7 @@
             </div>
             <!-- //table-borderless -->
 
-            <div class="table-borderless">
+            <div class="unit-table table-borderless">
               <em class="table-borderless__tit">CAMERA 정보</em>
               <table>
                 <colgroup>
@@ -107,7 +107,7 @@
                 <tbody>
                   <tr>
                     <th><span>CAMERA ID</span></th>
-                    <td>AUTO</td>
+                    <td style="padding-left:10px;">AUTO</td> <!-- 210430 style속성 추가 -->
                     <th><span>CAMERA IP</span></th>
                     <td><input type="text" class="input__style2"></td>
                     <th><span>CAMERA PORT</span></th>
