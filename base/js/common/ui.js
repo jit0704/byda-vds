@@ -95,7 +95,7 @@ lnb.init = function () {
       $(this).addClass('no-depth');
     });
 
-    $(document).on('click', '.lnb__list li a', function(e){
+    $(document).on('click', '.lnb__list li .btn-collapse', function(e){ // 210501 클릭 이벤트 셀렉트 수정
       e.stopPropagation();
       var $this = $(this);
       var $depthTarget = $this.next(); //ul
