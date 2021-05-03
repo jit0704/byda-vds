@@ -31,15 +31,20 @@
             <h3 class="huge-tit">지점 관리</h3>
             <!-- 화면 로딩시 비입력 모드는 각 form요소에 disabled 속성 추가해주시면 됩니다. -->
             <div class="ly-right__content--vertical ">
-              <div class="list-table list-table--entry">
+              <div class="btn-size2">
+                <button type="button" class="btn__regular btn__bg--style1">삭제</button>
+                <button type="button" class="btn__regular btn__bg--style1">저장</button>
+              </div>
+              <!-- //btn-size2 -->
+              <div class="unit-table table-borderless">
                 <table>
                   <colgroup>
-                    <col style="width:25%;" />
-                    <col />
+                    <col style="width: 15%;">
+                    <col">
                   </colgroup>
                   <tbody>
                     <tr>
-                      <th>지점명(상위)</th>
+                      <th><span>지점명(상위)</span></th>
                       <td>
                         <select class="select-box">
                           <option>사장교</option>
@@ -49,15 +54,15 @@
                       </td>
                     </tr>
                     <tr>
-                      <th>지점명</th>
+                      <th><span>지점명</span></th>
                       <td><input type="text" class="input__style2"></td>
                     </tr>
                     <tr>
-                      <th>정렬</th>
+                      <th><span>정렬</span></th>
                       <td><input type="text" class="input__style2"></td>
                     </tr>
                     <tr>
-                      <th>폴더여부</th>
+                      <th><span>폴더여부</span></th>
                       <td>
                         <div class="radio--group">
                           <label class="radio">
@@ -74,14 +79,9 @@
                   </tbody>
                 </table>
               </div>
-              <!-- //list-table -->
-              <div class="btn-size2">
-                <button type="button" class="btn__regular btn__bg--style1">삭제</button>
-                <button type="button" class="btn__regular btn__bg--style1">저장</button>
-              </div>
-              <!-- //flex__content -->
+              <!-- //unit-table -->
             </div>
-            <!-- //branch-manage -->
+            <!-- //ly-right__content--vertical -->
             <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
           </div>
           <!-- //ly-right -->
@@ -97,7 +97,7 @@
       $(function(){
         setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
           lnb.init(); // lnb 초기화 함수
-          lnb.currentActive('#test1'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
+          lnb.currentActive('#test3'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
       });
     </script>

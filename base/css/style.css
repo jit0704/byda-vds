@@ -230,6 +230,18 @@ table {
   height: calc(100% - 88px);
 }
 
+.ly-right__content--vertical .btn-size2 {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+}
+
+.ly-right__content--vertical .btn-size2 .btn__regular {
+  width: 85px;
+  height: 40px;
+  line-height: 43px;
+}
+
 .ly-right .ratio--100per {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -746,7 +758,7 @@ table {
 }
 
 .radio--group .radio + .radio {
-  margin-left: 12px;
+  margin-left: 30px;
 }
 
 .radio input {
@@ -1050,10 +1062,17 @@ table {
 }
 
 .lnb__tit {
+  position: relative;
   padding: 15px 0;
   color: #fff;
   text-align: center;
   background: #1c2f42;
+}
+
+.lnb__tit button.btn-register {
+  position: static;
+  margin-left: 12px;
+  vertical-align: bottom;
 }
 
 .lnb__list {
@@ -1107,25 +1126,6 @@ table {
           transform: rotate(180deg);
 }
 
-.lnb__list > li .btn-register {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  background: #bfbfbf;
-  border-radius: 3px;
-}
-
-.lnb__list > li .btn-register::after {
-  content: "\002B";
-  display: inline-block;
-  line-height: 32px;
-  font-size: 20px;
-  color: #000;
-}
-
 .lnb__list > li > .btn-collapse {
   padding-left: 40px;
 }
@@ -1152,17 +1152,36 @@ table {
 
 .lnb__list > li .btn-set {
   position: absolute;
-  right: 8px;
+  right: 25px;
   top: 10px;
   z-index: 1;
   width: 45px;
   height: 30px;
   line-height: 32px;
-  background: #bfbfbf;
+  background: #dedede;
   border-radius: 3px;
   color: #000;
   text-align: center;
   font-size: 15px;
+}
+
+.lnb .btn-register {
+  position: absolute;
+  top: 10px;
+  right: 32px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background: #dedede;
+  border-radius: 3px;
+}
+
+.lnb .btn-register::after {
+  content: "\002B";
+  display: inline-block;
+  line-height: 32px;
+  font-size: 20px;
+  color: #000;
 }
 
 .lnb .selected {
@@ -1302,30 +1321,6 @@ table {
   line-height: 20px;
   background: #fff;
   color: #212529;
-}
-
-.list-table--entry .select-box {
-  min-width: 120px;
-}
-
-.list-table--entry .radio {
-  line-height: 35px;
-}
-
-.list-table--entry td {
-  padding: 10px;
-  text-align: left;
-}
-
-.list-table--entry + .btn-size2 {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 30px;
-}
-
-.list-table--entry + .btn-size2 .btn__regular {
-  width: 120px;
 }
 
 .list-table__half > .box-wrap__algin--left,
@@ -1773,11 +1768,11 @@ table {
 }
 
 .container__branch .ly-left {
-  width: 550px;
+  width: 470px;
 }
 
 .container__branch .ly-right {
-  margin-left: 550px;
+  margin-left: 470px;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */

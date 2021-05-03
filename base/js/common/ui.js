@@ -132,5 +132,6 @@ lnb.removeSelect = function (){
 // 210428 추가 : 현재 페이지에 대한 lnb 메뉴 활성화
 lnb.currentActive = function (clickedEl){
   $target = $(clickedEl);
-  $target.addClass('selected').closest('ul').prev('a').trigger('click');
+  $target.addClass('selected').parents('li').addClass('active').find('ul').show(); // 210504 수정
+  //$target.addClass('selected').closest('ul').prev('.btn-collapse').trigger('click');
 }
