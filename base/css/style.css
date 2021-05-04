@@ -473,12 +473,8 @@ table {
 .modal .modal-popup__alert .modal-popup__content {
   margin-top: 70px;
   padding: 40px;
-  color: #fff;
-  text-align: center;
-}
-
-.modal .modal-popup__alert .modal-popup__content .modal-popup__text {
   color: #000;
+  text-align: center;
 }
 
 .modal .modal-popup__alert .modal-popup__btn {
@@ -1152,17 +1148,16 @@ table {
 
 .lnb__list > li .btn-set {
   position: absolute;
-  right: 25px;
-  top: 10px;
+  right: 35px;
+  top: 12px;
   z-index: 1;
-  width: 45px;
-  height: 30px;
-  line-height: 32px;
-  background: #dedede;
-  border-radius: 3px;
-  color: #000;
-  text-align: center;
-  font-size: 15px;
+  width: 25px;
+  height: 25px;
+  background: url(/base/images/icon_set.png) no-repeat 0 0/contain;
+}
+
+.lnb__list > li .btn-set:hover {
+  background: url(/base/images/icon_set_active.png) no-repeat 0 0/contain;
 }
 
 .lnb .btn-register {
@@ -1172,16 +1167,11 @@ table {
   z-index: 1;
   width: 30px;
   height: 30px;
-  background: #dedede;
-  border-radius: 3px;
+  background: url(/base/images/icon_plus.png) no-repeat 0 0/contain;
 }
 
-.lnb .btn-register::after {
-  content: "\002B";
-  display: inline-block;
-  line-height: 32px;
-  font-size: 20px;
-  color: #000;
+.lnb .btn-register:hover {
+  background: url(/base/images/icon_plus_active.png) no-repeat 0 0/contain;
 }
 
 .lnb .selected {
@@ -1773,6 +1763,10 @@ table {
 
 .container__branch .ly-right {
   margin-left: 470px;
+}
+
+.container__branch .ly-right .unit-table {
+  padding-bottom: 10px;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */

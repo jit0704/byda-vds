@@ -95,22 +95,17 @@ lnb.init = function () {
       $(this).addClass('no-depth');
     });
 
+    // 210505 수정
     $(document).on('click', '.lnb__list li .btn-collapse', function(e){ // 210501 클릭 이벤트 셀렉트 수정
       e.stopPropagation();
       var $this = $(this);
       var $depthTarget = $this.next(); //ul
-      var $siblings = $this.parent().siblings(); //li 형제 요소들
-
-      $this.parent('li').find('ul li').removeClass('active');
-      $siblings.removeClass('active');
-      $siblings.find('ul').slideUp(200);
 
       if ($depthTarget.css('display') == 'none') {
         $this.parent().addClass('active');
         $depthTarget.slideDown(200);
       } else {
         $depthTarget.slideUp(200);
-        $depthTarget.find('ul').slideUp(200);
         $this.parent().removeClass('active');
       }
     });
