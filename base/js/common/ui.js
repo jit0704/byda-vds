@@ -127,6 +127,46 @@ lnb.removeSelect = function (){
 // 210428 추가 : 현재 페이지에 대한 lnb 메뉴 활성화
 lnb.currentActive = function (clickedEl){
   $target = $(clickedEl);
-  $target.addClass('selected').parents('li').addClass('active').find('ul').show(); // 210504 수정
+  $target.addClass('selected').parents('li:not(.no-depth)').addClass('active').children('ul').show(); // 210506 수정
   //$target.addClass('selected').closest('ul').prev('.btn-collapse').trigger('click');
+}
+
+// 지점관리 lnb - 210506 추가
+var lnbBranch = {};
+lnbBranch.init = function () {
+  if ($('.lnb').length !== 0) {
+    $('.lnb__list li').each(function(){
+      if ($(this).find('>ul').length > 0) {
+        return;
+      }
+      $(this).addClass('no-depth');
+    });
+
+    $(document).on('click', '.lnb__list li .btn-collapse', function(e){
+      e.stopPropagation();
+      var $this = $(this);
+      var $depthTarget = $this.next(); //ul
+      var $siblings = $this.parent().siblings(); //li 형제 요소들
+      
+      $this.parent('li').find('ul li').removeClass('active');
+      $siblings.removeClass('active');
+      $siblings.find('ul').slideUp(200);
+
+      if ($depthTarget.css('display') == 'none') {
+        $this.parent().addClass('active');
+        $depthTarget.slideDown(200);
+        $siblings.find('.btn-collapse').removeClass('selected');
+      } else {
+        $depthTarget.slideUp(200);
+        $this.parent().removeClass('active');
+        $depthTarget.find('ul').slideUp(200);
+      }
+    });
+  }
+}
+
+// 지점관리 - 현재 페이지에 대한 lnb 메뉴 활성화
+lnbBranch.currentActive = function (clickedEl){
+  $target = $(clickedEl);
+  $target.addClass('selected').parents('li:not(.no-depth)').addClass('active').children('ul').show();
 }
