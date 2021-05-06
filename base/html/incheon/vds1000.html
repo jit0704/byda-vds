@@ -34,7 +34,8 @@
             <div class="ly-right__content--left fluid__target">
               <div class="unit fluid__target__unit">
                 <em class="unit__tit">210.168.0.100
-                  <button type="button" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></button>
+                  <!-- 210506 확대 버튼 a태그로 변경 -->
+                  <a href="#video-expand" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></a>
                 </em>
                 <div class="unit__content video__fluid">
                   <div id="player_id" class="video__fluid__el">
@@ -303,6 +304,22 @@
       </div>
       <!-- //container -->
 
+      <!-- 210506 영상 확대 팝업 추가 -->
+      <div id="video-expand" class="pop-video--expand">
+        <div class="unit">
+          <em class="unit__tit">210.168.0.100
+            <button type="button" class="btn-close btn-close--black"><span class="hidden">팝업 닫기</span></button>
+          </em>
+          <div class="unit__content video__fluid">
+            <div id="" class="video__fluid__el">
+              <video id="" autoplay playsinline controls muted width="100%" height="100%"></video>
+            </div>
+          </div>
+        </div>
+        <!-- //unit -->
+      </div>
+      <!-- //pop-video--expand -->
+
     </div>
     <!-- //wrapper -->
 
@@ -312,6 +329,30 @@
           lnb.init(); // lnb 초기화 함수
           lnb.currentActive('#test1'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
+
+        // 210506 영상 확대 팝업 UI기능
+        var $btnExpand = $('.btn-expand');
+        var $popEl = $('.pop-video--expand');
+        var $btnClose = $('.btn-close', $popEl);
+        $btnExpand.on('click', function(e){
+          e.preventDefault();
+          var $hash = $(this).attr('href');
+          $($hash).fadeIn(150);
+        });
+        $btnClose.on('click', function(){
+          $(this).closest($popEl).fadeOut(150);
+        });
+        $popEl.draggable({
+          containment: '.wrapper',
+          drag: function () {
+            $(this).css('transform', 'none');
+          }
+        });
+        $popEl.resizable({
+          containment: '.wrapper',
+          minWidth: 930,
+          minHeight: 529
+        });
       });
     </script>
   </body>
