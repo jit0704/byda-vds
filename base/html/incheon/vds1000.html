@@ -39,7 +39,9 @@
                 </em>
                 <div class="unit__content video__fluid">
                   <div id="player_id" class="video__fluid__el">
-                    <video id="ipcamera_video_id" autoplay playsinline controls muted width="100%" height="100%"></video>
+                    <video id="ipcamera_video_id" autoplay playsinline controls muted width="100%" height="100%">
+                      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                    </video>
                   </div>
                 </div>
               </div>
@@ -308,11 +310,14 @@
       <div id="video-expand" class="pop-video--expand">
         <div class="unit">
           <em class="unit__tit">210.168.0.100
-            <button type="button" class="btn-close btn-close--black"><span class="hidden">팝업 닫기</span></button>
+            <!-- 210508 닫기 버튼 클래스명 수정 -->
+            <button type="button" class="btn-close btn-close--white"><span class="hidden">팝업 닫기</span></button>
           </em>
           <div class="unit__content video__fluid">
             <div id="" class="video__fluid__el">
-              <video id="" autoplay playsinline controls muted width="100%" height="100%"></video>
+              <video autoplay playsinline controls muted width="100%" height="100%">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
         </div>
@@ -341,17 +346,24 @@
         });
         $btnClose.on('click', function(){
           $(this).closest($popEl).fadeOut(150);
+          $('body').css('overflow', 'auto'); // 210508 추가
         });
         $popEl.draggable({
           containment: '.wrapper',
           drag: function () {
             $(this).css('transform', 'none');
+          },
+          // 210508 추가
+          start: function () {
+            $('body').css('overflow', 'hidden');
           }
         });
         $popEl.resizable({
           containment: '.wrapper',
-          minWidth: 930,
-          minHeight: 529
+          // 210508 추가
+          resize: function () {
+            $(this).css('height', $(this).find('video').height() + 53);
+          }
         });
       });
     </script>

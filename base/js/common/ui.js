@@ -81,7 +81,7 @@ function unitBodyscrollHeight () {
   var $ancestorH;
   $tblEl.closest('.unit').addClass('is-bodyscroll');
   $ancestorH = $tblEl.closest('.is-bodyscroll').height();
-  $tblEl.css('height', $ancestorH - 90);
+  $tblEl.css('height', $ancestorH - 80); // 210508 수정
 }
 
 // lnb (210427 수정) 

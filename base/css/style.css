@@ -162,7 +162,7 @@ table {
 .container {
   position: relative;
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 90px);
   overflow: auto;
   background: #F7F7F7;
 }
@@ -253,6 +253,28 @@ table {
   -webkit-box-flex: 3.8;
       -ms-flex: 3.8 0 auto;
           flex: 3.8 0 auto;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--left .fluid__target__unit {
+  border: 0;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--left .fluid__target__unit .unit__tit {
+  border-top: 1px solid #a8abaf;
+  border-left: 1px solid #a8abaf;
+  border-right: 1px solid #a8abaf;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--left .fluid__target__unit .video__fluid video {
+  border-left: 1px solid #a8abaf;
+  border-right: 1px solid #a8abaf;
+  border-bottom: 1px solid #a8abaf;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--left .fluid__target__none {
+  margin-top: 0;
 }
 
 .ly-right .ratio--6-4 .ly-right__content--right {
@@ -613,8 +635,8 @@ table {
 
 .btn-expand {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   background: url(/base/images/icon_expand.png) no-repeat 0 0;
   background-size: contain;
 }
@@ -875,22 +897,22 @@ table {
 /* gnb */
 .gnb-wrap {
   width: 100%;
-  height: 100px;
+  height: 90px;
   background: #2A3F54;
 }
 
 .gnb {
   position: relative;
-  padding-top: 22px;
+  padding-top: 12px;
 }
 
 .gnb .gnb-logo {
   width: 235px;
-  margin-left: 23px;
+  margin: 4px 0 0 23px;
 }
 
 .gnb .gnb-logo img {
-  width: 100%;
+  width: 95%;
 }
 
 .gnb .box-wrap__algin--right {
@@ -899,7 +921,7 @@ table {
 
 .gnb-list {
   position: absolute;
-  top: 33px;
+  top: 28px;
   left: 350px;
   z-index: 2;
 }
@@ -913,7 +935,7 @@ table {
 .gnb-list > li {
   float: left;
   min-width: 285px;
-  min-height: 66px;
+  min-height: 56px;
 }
 
 .gnb-list > li.menu-default .gnb-list__title::before {
@@ -970,7 +992,7 @@ table {
 .gnb-list .gnb-list__title {
   position: relative;
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   font-size: 24px;
   color: #ECF0F1;
 }
@@ -1194,22 +1216,14 @@ table {
 }
 
 /* 비디오 영역 */
-.video__fluid {
-  position: relative;
-  height: calc(100% - 40px);
-}
-
 .video__fluid__el {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
 .video__fluid__el video {
   width: 100%;
   height: 100%;
+  background: #000;
 }
 
 /* 컨텐츠에 들어가는 작은 박스 디자인 */
@@ -1224,10 +1238,10 @@ table {
 .unit__tit {
   position: relative;
   display: block;
-  padding: 0 8px;
-  line-height: 40px;
+  padding: 0 10px;
+  line-height: 30px;
   color: #212637;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   background: #c5c5c5;
 }
@@ -1260,7 +1274,11 @@ table {
       flex-shrink: 0;
 }
 
-/* bullte */
+/* jquery resizable */
+.ui-resizable-se {
+  right: -2px;
+}
+
 /* 목록 화면 */
 .list-table__group {
   padding-bottom: 30px;
@@ -1757,7 +1775,7 @@ table {
 }
 
 .list-table.statis tbody tr:not(:first-child) td {
-  height: 50px;
+  height: 40px;
 }
 
 /* 모니터링 화면 > 검지 테이블 */
@@ -1774,7 +1792,6 @@ table {
   left: 50%;
   z-index: 5;
   width: 1280px;
-  height: 650px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1782,16 +1799,22 @@ table {
 
 .pop-video--expand .unit {
   height: 100%;
+  border: 0;
 }
 
 .pop-video--expand .unit__tit {
+  line-height: 50px;
+  padding: 0 20px;
+  background: #2e3345;
+  font-size: 18px;
+  color: #fff;
   cursor: move;
 }
 
 .pop-video--expand .btn-close {
   position: absolute;
-  top: 0;
-  right: 15px;
+  top: 5px;
+  right: 20px;
   width: 30px;
   height: 30px;
 }
@@ -1816,28 +1839,19 @@ table {
 /* 모니터링 통계 분석 테이블 높이 조절 */
 @media screen and (min-height: 1022px) and (max-height: 1149px) {
   .list-table.statis table {
-    height: 206px;
-  }
-  .list-table.statis table thead th {
-    height: 45px;
+    height: 161px;
   }
 }
 
 @media screen and (min-height: 1150px) and (max-height: 1225px) {
-  .list-table.statis table {
-    height: 226px;
-  }
-  .list-table.statis table thead th {
-    height: 50px;
+  .ly-right__content--right {
+    width: 706px;
   }
 }
 
 @media screen and (min-height: 1226px) {
-  .list-table.statis table {
-    height: 260px;
-  }
-  .list-table.statis table thead th {
-    height: 59px;
+  .ly-right__content--right {
+    width: 722px;
   }
 }
 
