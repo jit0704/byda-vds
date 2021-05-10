@@ -273,10 +273,6 @@ table {
           box-sizing: border-box;
 }
 
-.ly-right .ratio--6-4 .ly-right__content--left .fluid__target__none {
-  margin-top: 0;
-}
-
 .ly-right .ratio--6-4 .ly-right__content--right {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -1218,6 +1214,7 @@ table {
 /* 비디오 영역 */
 .video__fluid__el {
   width: 100%;
+  font-size: 0;
 }
 
 .video__fluid__el video {
@@ -1775,7 +1772,7 @@ table {
 }
 
 .list-table.statis tbody tr:not(:first-child) td {
-  height: 40px;
+  height: 39px;
 }
 
 /* 모니터링 화면 > 검지 테이블 */
