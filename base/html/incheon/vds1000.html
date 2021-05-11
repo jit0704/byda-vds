@@ -31,8 +31,8 @@
         <div class="ly-right">
           <h3 class="huge-tit">공항방면 10+002</h3>
           <div class="ly-right__content ratio--6-4">
-            <div class="ly-right__content--left fluid__target">
-              <div class="unit fluid__target__unit">
+            <div class="ly-right__content--left"> <!-- 210511 fluid__target 클래스 삭제 -->
+              <div class="unit unit__video"> <!-- 210511 fluid__target__unit 클래스 삭제, unit__video클래스 추가 -->
                 <em class="unit__tit">210.168.0.100
                   <!-- 210506 확대 버튼 a태그로 변경 -->
                   <a href="#video-expand" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></a>
@@ -47,7 +47,7 @@
                 </div>
               </div>
               <!-- //unit -->
-              <div class="unit fluid__target__none">
+              <div class="unit unit__statis"> <!-- 210511 fluid__target__none 클래스 삭제, unit__statis 클래스 추가 -->
                 <em class="unit__tit">통계 분석</em>
                 <div class="unit__content">
                   <div class="list-table statis">
@@ -317,8 +317,8 @@
           <div class="unit__content video__fluid">
             <div id="" class="video__fluid__el">
               <video autoplay playsinline controls muted width="100%" height="100%">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-                <!-- <source src="../winter.mp4" type="video/mp4"> -->
+                <!-- <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"> -->
+                <source src="../winter.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -337,17 +337,28 @@
           lnb.currentActive('#test1'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
 
+        // 210511 검지차량정보 테이블과 통계분석 높이값 맞춤
+        $(window).on('resize', function(){
+          var $lyParent = $('.ly-right__content--left');
+          var $videoH = $('.unit__video', $lyParent).outerHeight(true);
+          var $statisH = $('.unit__statis', $lyParent).outerHeight(true);
+          var $sum = $videoH + $statisH;
+          $('.ly-right__content--right > .unit').css('height', $sum);
+          unitBodyscrollHeight();
+        }).resize();
+
         // 210510 영상 너비를 해상도에 따른 레이아웃 너비와 동일하게 px값으로 맞춤
-        var winW = $(window).width();
-        var $lyConW = $('.ly-right__content').width();
-        var $gumjiTblW = $('.ly-right__content--right').width() - 17;
-        var $rest = $lyConW - $gumjiTblW;
+        // 210511 삭제
+        // var winW = $(window).width();
+        // var $lyConW = $('.ly-right__content').width();
+        // var $gumjiTblW = $('.ly-right__content--right').width() - 17;
+        // var $rest = $lyConW - $gumjiTblW;
         
-        if (winW <= 1920) {
-          $('.ly-right__content--left .video__fluid__el').css('width', $rest);
-        } else if (winW > 1920) {
-          $('.ly-right__content--left .video__fluid__el').css('width', $rest - 32);
-        }
+        // if (winW <= 1920) {
+        //   $('.ly-right__content--left .video__fluid__el').css('width', $rest);
+        // } else if (winW > 1920) {
+        //   $('.ly-right__content--left .video__fluid__el').css('width', $rest - 32);
+        // }
 
         // 210506 영상 확대 팝업 UI기능
         var $btnExpand = $('.btn-expand');

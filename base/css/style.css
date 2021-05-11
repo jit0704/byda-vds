@@ -200,7 +200,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   height: calc(100% - 88px);
-  overflow: hidden;
+  overflow-y: auto;
   padding-bottom: 15px;
 }
 
@@ -211,7 +211,7 @@ table {
 }
 
 .ly-right__content--right {
-  width: 680px;
+  width: 648px;
   padding-left: 15px;
 }
 
@@ -1005,14 +1005,14 @@ table {
 
 .gnb-list .gnb-list__item {
   display: none;
-  padding: 20px 25px;
+  padding: 20px 25px 20px 40px;
   background: #1c2f42;
 }
 
 .gnb-list .gnb-list__item a {
   display: block;
   color: #dee2e6;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -1212,9 +1212,15 @@ table {
 }
 
 /* 비디오 영역 */
+.video__fluid {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
 .video__fluid__el {
+  position: absolute;
   width: 100%;
-  font-size: 0;
+  height: 100%;
 }
 
 .video__fluid__el video {
@@ -1247,28 +1253,6 @@ table {
   position: absolute;
   top: 1px;
   right: 10px;
-}
-
-.fluid__target {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-}
-
-.fluid__target__unit {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-
-.fluid__target__none {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
 /* jquery resizable */
@@ -1834,24 +1818,6 @@ table {
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */
-@media screen and (min-height: 1022px) and (max-height: 1149px) {
-  .list-table.statis table {
-    height: 161px;
-  }
-}
-
-@media screen and (min-height: 1150px) and (max-height: 1225px) {
-  .ly-right__content--right {
-    width: 706px;
-  }
-}
-
-@media screen and (min-height: 1226px) {
-  .ly-right__content--right {
-    width: 722px;
-  }
-}
-
 /* IE전용 style */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .table-borderless table tbody .flex__content.display {
