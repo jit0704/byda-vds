@@ -337,6 +337,27 @@
           lnb.currentActive('#test1'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
         }, 50);
 
+        // 동영상 사이즈 셋팅 함수 210512 추가
+        videoSizeInit();
+
+        function videoSizeInit (w, h) {
+          var $unit = $('.unit__video');
+          var $video = $('.video__fluid', $unit);
+
+          if (w === undefined || h === undefined) {
+            return;
+          } else {
+            $unit.css({
+              'width': w+'px',
+              'height': (h + 30)+'px'
+            }); 
+            $video.css({
+              'width': w+'px',
+              'height': h+'px'
+            });
+          }
+        }
+
         // 210511 검지차량정보 테이블과 통계분석 높이값 맞춤
         $(window).on('resize', function(){
           var $lyParent = $('.ly-right__content--left');
@@ -346,19 +367,6 @@
           $('.ly-right__content--right > .unit').css('height', $sum);
           unitBodyscrollHeight();
         }).resize();
-
-        // 210510 영상 너비를 해상도에 따른 레이아웃 너비와 동일하게 px값으로 맞춤
-        // 210511 삭제
-        // var winW = $(window).width();
-        // var $lyConW = $('.ly-right__content').width();
-        // var $gumjiTblW = $('.ly-right__content--right').width() - 17;
-        // var $rest = $lyConW - $gumjiTblW;
-        
-        // if (winW <= 1920) {
-        //   $('.ly-right__content--left .video__fluid__el').css('width', $rest);
-        // } else if (winW > 1920) {
-        //   $('.ly-right__content--left .video__fluid__el').css('width', $rest - 32);
-        // }
 
         // 210506 영상 확대 팝업 UI기능
         var $btnExpand = $('.btn-expand');
