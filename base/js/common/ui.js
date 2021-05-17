@@ -11,6 +11,31 @@ $(function(){
   }
 });
 
+// 210517 해상도별 카피라이트 위치 조정
+$(window).on('load', function(){
+  $(window).on('resize', function(){
+    var $winW = $(window).width();
+    var $bodyH = parseInt($('body').height());
+    var $lyRightH = parseInt($('.ly-right').prop('scrollHeight'));
+    var $copy = $('.copylight');
+    // console.log(`$bodyH:${$bodyH}`, `$lyRightH:${$lyRightH}`);
+
+    if (0 < $winW && 1900 > $winW) {
+      if ($bodyH === $lyRightH) {
+        $copy.addClass('modify');
+      } else {
+        $copy.removeClass('modify');
+      }
+    } else if (1901 < $winW) {
+      if ($bodyH === $lyRightH || $bodyH < $lyRightH) {
+        $copy.addClass('modify');
+      } else {
+        $copy.removeClass('modify');
+      }
+    }
+  }).resize();
+});
+
 // 공통 UI
 function cmmnui () {
 
