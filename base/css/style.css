@@ -799,6 +799,9 @@ table {
 }
 
 .radio .txt {
+  padding-left: 3px;
+  line-height: 18px;
+  font-size: 14px;
   vertical-align: middle;
 }
 
@@ -1187,7 +1190,7 @@ table {
 
 .lnb__list > li .btn-set {
   position: absolute;
-  right: 35px;
+  right: 74px;
   top: 12px;
   z-index: 1;
   width: 25px;
@@ -1202,7 +1205,7 @@ table {
 .lnb .btn-register {
   position: absolute;
   top: 12px;
-  right: 35px;
+  right: 75px;
   z-index: 1;
   width: 25px;
   height: 25px;
@@ -1805,10 +1808,8 @@ table {
 
 .pop-video--expand .btn-close {
   position: absolute;
-  top: 5px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
+  top: 6px;
+  right: 15px;
 }
 
 /* 지점 관리 페이지 */
@@ -1952,13 +1953,13 @@ table {
   }
   .ly-right .ratio--6-4 .ly-right__content--left {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 53%;
+            flex: 1 0 53%;
   }
   .ly-right .ratio--6-4 .ly-right__content--right {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 47%;
+            flex: 1 0 47%;
     width: auto;
   }
   .ly-right .ratio--6-4 .ly-right__content--right .list-table--gumji .list-table__bordered col:nth-child(1) {
@@ -1999,6 +2000,9 @@ table {
   .vds2200 .table-borderless.field td {
     letter-spacing: -1px;
   }
+  .vds2200 .table-borderless.field td:nth-child(2) {
+    font-size: 14px;
+  }
   .vds2200 .table-borderless.radar col:nth-child(1), .vds2200 .table-borderless.camera col:nth-child(1) {
     width: 19% !important;
   }
@@ -2016,6 +2020,9 @@ table {
   }
   .vds2200 .table-borderless.radar col:nth-child(6), .vds2200 .table-borderless.camera col:nth-child(6) {
     width: 14.33% !important;
+  }
+  .vds2200 .table-borderless.camera td:nth-child(2) {
+    font-size: 14px;
   }
   .vds2200 .table-borderless .flex__content.display {
     margin-left: -90px;
@@ -2041,6 +2048,9 @@ table {
   }
   .modal-popup.mw1230 .table-borderless.field col:nth-child(3) {
     width: 18.6% !important;
+  }
+  .modal-popup.mw1230 .table-borderless.field td:nth-child(2) {
+    font-size: 14px;
   }
   .modal-popup.mw1230 .table-borderless.radar col:nth-child(1) {
     width: 18.66% !important;
@@ -2077,6 +2087,9 @@ table {
   }
   .modal-popup.mw1230 .table-borderless.camera col:nth-child(6) {
     width: 14.66% !important;
+  }
+  .modal-popup.mw1230 .table-borderless.camera td:nth-child(2) {
+    font-size: 14px;
   }
   .modal-popup.mw1230 .table-borderless .flex__content.display {
     margin-left: -70px;
