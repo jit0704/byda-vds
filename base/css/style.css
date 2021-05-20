@@ -1190,7 +1190,7 @@ table {
 
 .lnb__list > li .btn-set {
   position: absolute;
-  right: 74px;
+  right: 35px;
   top: 12px;
   z-index: 1;
   width: 25px;
@@ -1205,7 +1205,7 @@ table {
 .lnb .btn-register {
   position: absolute;
   top: 12px;
-  right: 75px;
+  right: 35px;
   z-index: 1;
   width: 25px;
   height: 25px;
@@ -1818,11 +1818,11 @@ table {
 }
 
 .container__branch .ly-left {
-  width: 470px;
+  width: 430px;
 }
 
 .container__branch .ly-right {
-  margin-left: 470px;
+  margin-left: 430px;
 }
 
 .container__branch .ly-right .unit-table {
