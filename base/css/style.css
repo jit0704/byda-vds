@@ -175,8 +175,8 @@ table {
 }
 
 .form-group {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #74748a;
 }
 
@@ -1341,9 +1341,13 @@ table {
   padding-bottom: 30px;
 }
 
+.list-table__group .list-table tbody td {
+  height: 50px;
+}
+
 .list-table__title {
-  margin-bottom: 15px;
-  font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 20px;
   color: #3a4e63;
 }
 
