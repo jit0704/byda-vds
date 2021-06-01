@@ -276,9 +276,22 @@ table {
 }
 
 .ly-right .ratio--6-4 .ly-right__content--right {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
+}
+
+.ly-right .ratio--6-4 .ly-right__content--right > .btn__regular {
+  position: absolute;
+  top: -51px;
+  right: 0;
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  line-height: 43px;
+  padding: 0 15px;
+  background: #c5c5c5;
 }
 
 .ly-right .huge-tit {
