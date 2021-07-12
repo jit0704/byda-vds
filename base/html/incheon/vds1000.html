@@ -378,10 +378,11 @@
           e.preventDefault();
           var $hash = $(this).attr('href');
           $($hash).fadeIn(150);
+          $('body').css('overflow-y', 'hidden'); //210711 추가
         });
         $btnClose.on('click', function(){
           $(this).closest($popEl).fadeOut(150);
-          $('body').css('overflow', 'auto'); // 210508 추가
+          //$('body').css('overflow', 'auto'); 210711 삭제
         });
         $popEl.draggable({
           containment: '.wrapper',
