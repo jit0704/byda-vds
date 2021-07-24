@@ -1944,6 +1944,11 @@ table {
           flex: 1;
 }
 
+.demo > .right .list-table__inner2 {
+  overflow-y: scroll;
+  min-height: 585px;
+}
+
 /* 모니터링 통계 분석 테이블 높이 조절 */
 @media screen and (min-width: 1930px) and (max-width: 2400px) {
   .ly-right .ratio--6-4 .ly-right__content--right {

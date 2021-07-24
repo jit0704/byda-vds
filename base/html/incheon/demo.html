@@ -11,14 +11,39 @@
     <script type="text/javascript" src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
-    <!-- 210724 추가 -->
+    <!-- 210724 재수정 -->
     <style>
-      html, body {width: 1920px;margin:0 auto;}
+      html, body {width: 1920px;height:auto;margin:0 auto;}
     </style>
   </head>
   <body>
     <div class="wrapper">
-      <div class="gnb-wrap" include-html="/base/html/incheon/gnb.html">
+      <div class="gnb-wrap">
+        <div class="box-wrap__algin gnb">
+          <div class="box-wrap__algin--left">
+            <h1 class="gnb-logo"><img src="/base/images/logo.png" alt="BYDA"></h1>
+            <ul class="gnb-list">
+              <li class="menu-monitering">
+                <a href="#" class="gnb-list__title">모니터링</a>
+                <!-- <div class="gnb-list__item">
+                  <a href="#">메뉴1</a>
+                  <a href="#">메뉴2</a>
+                  <a href="#">메뉴3</a>
+                  <a href="#">메뉴4</a>
+                </div> -->
+              </li>
+              <li class="menu-set">
+                <a href="#" class="gnb-list__title">설정관리</a>
+                <!-- <div class="gnb-list__item">
+                  <a href="#">메뉴1</a>
+                  <a href="#">메뉴2</a>
+                </div> -->
+              </li>
+            </ul>
+          </div>
+          <!-- //box-wrap__algin--left -->
+        </div>
+        <!-- //box-wrap__algin -->
       </div>
       <!-- //gnb-wrap -->
 
@@ -69,52 +94,64 @@
             <div class="unit">
               <em class="unit__tit">보행자 검지 정보</em>
               <div class="unit__content">
-                <div class="list-table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>시간</th>
-                        <th>ID</th>
-                        <th>시작방향</th>
-                        <th>도착방향</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2021.07.01 13:25:00</td>
-                        <td>0</td>
-                        <td>동</td>
-                        <td>서</td>
-                      </tr>
-                      <tr>
-                        <td>2021.07.01 13:25:00</td>
-                        <td>0</td>
-                        <td>동</td>
-                        <td>서</td>
-                      </tr>
-                      <tr>
-                        <td>2021.07.01 13:25:00</td>
-                        <td>0</td>
-                        <td>동</td>
-                        <td>서</td>
-                      </tr>
-                      <tr>
-                        <td>2021.07.01 13:25:00</td>
-                        <td>0</td>
-                        <td>동</td>
-                        <td>서</td>
-                      </tr>
-                      <tr>
-                        <td>2021.07.01 13:25:00</td>
-                        <td>0</td>
-                        <td>동</td>
-                        <td>서</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <!-- 210724 테이블 재수정 -->
+                <div class="list-table list-table__bodyscroll">
+                  <div class="list-table__inner2">
+                    <div class="list-table__headerbg"></div>
+                    <table class="list-table__bordered">
+                      <colgroup>
+                        <col style="width:40%;" />
+                        <col style="width:20%;" />
+                        <col style="width:20%;" />
+                        <col style="width:20%;" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th><span class="fixed-th" style="width:40%;">시간</span></th>
+                          <th><span class="fixed-th" style="width:20%;">ID</span></th>
+                          <th><span class="fixed-th" style="width:20%;">시작방향</span></th>
+                          <th><span class="fixed-th" style="width:20%;">도착방향</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2021.07.01 13:25:00</td>
+                          <td>0</td>
+                          <td>동</td>
+                          <td>서</td>
+                        </tr>
+                        <tr>
+                          <td>2021.07.01 13:25:00</td>
+                          <td>0</td>
+                          <td>동</td>
+                          <td>서</td>
+                        </tr>
+                        <tr>
+                          <td>2021.07.01 13:25:00</td>
+                          <td>0</td>
+                          <td>동</td>
+                          <td>서</td>
+                        </tr>
+                        <tr>
+                          <td>2021.07.01 13:25:00</td>
+                          <td>0</td>
+                          <td>동</td>
+                          <td>서</td>
+                        </tr>
+                        <tr>
+                          <td>2021.07.01 13:25:00</td>
+                          <td>0</td>
+                          <td>동</td>
+                          <td>서</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //list-table__inner -->
                 </div>
                 <!-- //list-table -->
               </div>
+              <!-- //unit__content -->
             </div>
             <!-- //unit -->
           </div>
@@ -125,10 +162,11 @@
     <!-- //wrapper -->
 
     <script>
-      //210724 수정
+      //210724 재수정
       var $winH = $(window).height() - 162;
+      var $tblH = $winH - 190;
       $('.video__fluid__el').css('height', $winH);
-      console.log($(window).height(), $(document).height());
+      $('.list-table__bodyscroll .list-table__inner2').css('height', $tblH);
     </script>
   </body>
 </html>
