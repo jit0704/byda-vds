@@ -1919,7 +1919,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding-top: 110px;
+  padding: 110px 20px 20px;
 }
 
 .demo > .left {
@@ -1935,6 +1935,7 @@ table {
 
 .demo > .left .video__fluid__el {
   position: static;
+  min-height: 775px;
 }
 
 .demo > .right {

@@ -11,6 +11,10 @@
     <script type="text/javascript" src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+    <!-- 210724 추가 -->
+    <style>
+      html, body {width: 1920px;margin:0 auto;}
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -121,11 +125,10 @@
     <!-- //wrapper -->
 
     <script>
-      $(window).on('resize', videoHeightVal).resize();
-      function videoHeightVal () {
-        var $winH = $(window).height() - 142;
-        $('.video__fluid__el').css('height', $winH);
-      }
+      //210724 수정
+      var $winH = $(window).height() - 162;
+      $('.video__fluid__el').css('height', $winH);
+      console.log($(window).height(), $(document).height());
     </script>
   </body>
 </html>
