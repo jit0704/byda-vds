@@ -93,7 +93,14 @@
             <!-- //unit -->
 
             <div class="unit">
-              <em class="unit__tit">보행자 검지 정보</em>
+              <div class="unit__tit btns">
+                <span class="tit">보행자 검지 정보</span>
+                <span class="btn-size2">
+                  <button type="button" class="btn-default">초기화</button>
+                  <button type="button" class="btn-default">Excel Down</button>
+                </span>
+              </div>
+              <!-- //unit__tit -->
               <div class="unit__content">
                 <!-- 210724 테이블 재수정 -->
                 <div class="list-table list-table__bodyscroll">
@@ -165,7 +172,7 @@
     <script>
       //210724 재수정
       var $winH = $(window).height() - 162;
-      var $tblH = $winH - 190;
+      var $tblH = $winH - 208;
       $('.video__fluid__el').css('height', $winH);
       $('.list-table__bodyscroll .list-table__inner2').css('height', $tblH);
     </script>

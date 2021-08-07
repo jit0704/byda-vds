@@ -1949,9 +1949,32 @@ table {
           flex: 1;
 }
 
+.demo > .right .unit__tit.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.demo > .right .unit__tit.btns .btn-size2 {
+  margin-left: auto;
+}
+
+.demo > .right .unit__tit.btns .btn-size2 .btn-default {
+  border: 0;
+}
+
+.demo > .right .unit__tit.btns .btn-size2 .btn-default:first-child {
+  margin-right: 10px;
+}
+
 .demo > .right .list-table__inner2 {
   overflow-y: scroll;
-  min-height: 585px;
+  min-height: 567px;
 }
 
 .demo.type2 {
@@ -1982,6 +2005,10 @@ table {
 
 .demo.type2 .pass .list-table table {
   height: 100%;
+}
+
+.demo.type2 .pass .list-table table th, .demo.type2 .pass .list-table table td {
+  border: 1px solid #a8abaf;
 }
 
 .demo.type2 .pass .btn-size2 {
